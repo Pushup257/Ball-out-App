@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar color ="main">
+    <ion-title><b>Join</b></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content >
+         <img class="image" src="https://arlingtonva.s3.dualstack.us-east-1.amazonaws.com/wp-content/uploads/sites/17/2014/08/towers-park.jpg"  />
+      <div class="info">
+        <ion-item>
+  <ion-label>Soccer</ion-label>
+  <ion-checkbox color="dark" checked="false"></ion-checkbox>
+</ion-item>
+<ion-item>
+  <ion-label>Basketball</ion-label>
+  <ion-checkbox color="dark" checked="true"></ion-checkbox>
+</ion-item>
+      <ion-item>
+    <ion-input type="text" placeholder="Location"></ion-input>
+  </ion-item>
+     <ion-item>
+      <ion-label>Duration of Game</ion-label>
+      <ion-select [(ngModel)]="sport" interface="popover">
+        <ion-select value="1">30 min</ion-select>
+        <ion-option value="2">45 min</ion-option>
+        <ion-option value="3">1 hour</ion-option>
+        <ion-option value="4">1hr 30min</ion-option>
+      </ion-select>
+    </ion-item>
+     <ion-item>
+      <ion-label>Amount of players</ion-label>
+      <ion-select [(ngModel)]="players" interface="popover">
+        <ion-option value="1">4</ion-option>
+        <ion-option value="2">6-8</ion-option>
+        <ion-option value="3">8-11</ion-option>
+      </ion-select>
+    </ion-item>
+      </div>
+  <div class="button">
+  <button ion-button color="dark">Join</button>
+  </div>
+</ion-content>

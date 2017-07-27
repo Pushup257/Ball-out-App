@@ -1,17 +1,157 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="main">
     <ion-title>
-      Contact
+      Profile
     </ion-title>
   </ion-navbar>
+
+
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-left></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+
+  <div padding>
+    <ion-segment [(ngModel)]="Profile">
+      <ion-segment-button value="Me">
+        Me
+      </ion-segment-button>
+      <ion-segment-button value="Friend">
+        Friends
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+
+  <div [ngSwitch]="Profile">
+    <ion-list *ngSwitchCase="'Me'">
+      <ion-item>
+        <ion-input type="text" placeholder="Full name"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gender</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="f">Female</ion-option>
+          <ion-option value="m">Male</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>Age</ion-label>
+        <ion-select [(ngModel)]="age">
+          <ion-option value="01">13</ion-option>
+          <ion-option value="14">14</ion-option>
+          <ion-option value="02">15</ion-option>
+          <ion-option value="03">16</ion-option>
+          <ion-option value="04">17</ion-option>
+          <ion-option value="05">18</ion-option>
+          <ion-option value="06">19</ion-option>
+          <ion-option value="07">20</ion-option>
+          <ion-option value="08">21</ion-option>
+          <ion-option value="09">22</ion-option>
+          <ion-option value="10">23</ion-option>
+          <ion-option value="11">24</ion-option>
+          <ion-option value="12">25</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-fab right bottom>
+        <button ion-fab color="black"><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+          <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+          <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+        </ion-fab-list>
+      </ion-fab>
+
+      <ion-item>
+        <ion-label>BasketBall</ion-label>
+        <ion-select [(ngModel)]="gaming" interface="popover">
+          <ion-option value="1">Beginner</ion-option>
+          <ion-option value="3">Intermediete</ion-option>
+          <ion-option value="4">Baller</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Soccer</ion-label>
+        <ion-select [(ngModel)]="sport" interface="popover">
+          <ion-option value="5">Beginner</ion-option>
+          <ion-option value="6">Intermediete</ion-option>
+          <ion-option value="7">profecient</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Notifications</ion-label>
+        <ion-select [(ngModel)]="notifications" interface="action-sheet">
+          <ion-option value="enable">Enable</ion-option>
+          <ion-option value="mute">Mute</ion-option>
+          <ion-option value="mute_week">Mute 5 hrs</ion-option>
+          <ion-option value="mute_year">Mute 10 hrs</ion-option>
+          <ion-option value="mute_2">Mute 12 hrs</ion-option>
+          <ion-option value="mute3">Mute 24 hrs</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Friend'">
+      <ion-list-header>
+       <b> Friends </b>
+      </ion-list-header>
+
+      <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcXAAAAJGU2MzA5NDkyLTU2MzMtNDY1ZC1hNDY2LTU0YWFkNGI0ZDdjNg.jpg">
+    </ion-thumbnail>
+    <h2>Jonathan Caserolla</h2>
+    <p>hehehehahhaha!!!</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcXAAAAJGU2MzA5NDkyLTU2MzMtNDY1ZC1hNDY2LTU0YWFkNGI0ZDdjNg.jpg">
+    </ion-thumbnail>
+    <h2>Jonathan CaseAsada</h2>
+    <p>hehehehahhaha!!!</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcXAAAAJGU2MzA5NDkyLTU2MzMtNDY1ZC1hNDY2LTU0YWFkNGI0ZDdjNg.jpg">
+    </ion-thumbnail>
+    <h2>Jonathan CaseSoda</h2>
+    <p>hehehehahhaha!!!</p>
+  </ion-item>
+ 
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcXAAAAJGU2MzA5NDkyLTU2MzMtNDY1ZC1hNDY2LTU0YWFkNGI0ZDdjNg.jpg">
+    </ion-thumbnail>
+    <h2>Jonathan casasasa</h2>
+    <p>hehehehahhaha!!!</p>
+  </ion-item>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAcXAAAAJGU2MzA5NDkyLTU2MzMtNDY1ZC1hNDY2LTU0YWFkNGI0ZDdjNg.jpg">
+    </ion-thumbnail>
+    <h2>Jonathan Casalala</h2>
+    <p>hehehehahhaha!!!</p>
+  </ion-item>
+ 
+      <ion-item>
+    <ion-thumbnail item-start>
+      <img src="https://i.ytimg.com/vi/c6olCOmXyBk/maxresdefault.jpg">
+    </ion-thumbnail>
+    <h3>Marcelino</h3>
+    <p>yo wasup!!!!</p>
+  </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

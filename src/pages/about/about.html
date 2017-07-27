@@ -1,11 +1,57 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      About
-    </ion-title>
+
+  <ion-navbar color ="main">
+    <ion-title><b>Host</b></ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content padding>
-
+<ion-content>
+         <img class="image" src="PicCollage.png"/>
+      <div class="info">
+     <ion-item>
+    <ion-input type="text" placeholder="Name of Event"></ion-input>
+  </ion-item>
+      <ion-item>
+    <ion-input type="text" placeholder="Location"></ion-input>
+  </ion-item>
+   <ion-item>
+    <ion-input type="text" placeholder="Time of Game"></ion-input>
+  </ion-item>
+       <ion-item>
+      <ion-label>Type of sport</ion-label>
+      <ion-select [(ngModel)]="sport" interface="popover">
+        <ion-option value="1">Basketball</ion-option>
+        <ion-option value="2">Soccer</ion-option>
+      </ion-select>
+    </ion-item>
+     <ion-item>
+      <ion-label>Duration of Game</ion-label>
+      <ion-select [(ngModel)]="sport" interface="popover">
+        <ion-option value="4">30 min</ion-option>
+        <ion-option value="5">45 min</ion-option>
+        <ion-option value="6">1 hour</ion-option>
+        <ion-option value="7">1hr 30min</ion-option>
+      </ion-select>
+    </ion-item>
+       <ion-item>
+      <ion-label>...</ion-label>
+      <ion-select [(ngModel)]="sport" interface="popover">
+        <ion-option value="5">For fun</ion-option>
+        <ion-option value="6">Competitive</ion-option>
+      </ion-select>
+    </ion-item>
+     <ion-item>
+      <ion-label>Amount of players</ion-label>
+      <ion-select [(ngModel)]="players" interface="popover">
+        <ion-option value="1">2-4</ion-option>
+        <ion-option value="2">6-10</ion-option>
+        <ion-option value="3">12-20</ion-option>
+        <ion-option value="4">+20</ion-option>
+      </ion-select>
+    </ion-item>
+      </div>
+  <div class="button">
+  <button ion-button color="dark">Host</button>
+  </div>
 </ion-content>

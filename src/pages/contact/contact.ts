@@ -6,6 +6,8 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+  Profile = "Me";
+  gender =0;
 
   constructor(public navCtrl: NavController) {
 
