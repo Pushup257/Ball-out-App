@@ -4,7 +4,7 @@ import { NavController } from 'ionic-angular';
 import { JoinPage } from '../join/join';
 import { AlumniPage } from '../alumni/alumni';
 
-
+import { KeyboardManagerProvider } from "../../providers/keyboard-manager/keyboard-manager";
 
 import {
  GoogleMaps,
