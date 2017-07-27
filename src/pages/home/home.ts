@@ -26,6 +26,8 @@ export class HomePage {
   typing: boolean = false;
   searchQuery: string = '';
   items: string[];
+  splash: true;
+  tabBarElement: any;
 
 
   constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform) { 
@@ -34,8 +36,18 @@ export class HomePage {
       // Here you can do any higher level native things you might need.
        this.loadMap();
        this.initializeItems();
+       this.tabBarElement = document.querySelector('.tabbar')
     });
   }
+    ionViewDidLoad() {
+    this.tabBarElement.style.display = 'none';
+    setTimeout(() => {
+      this.splash = false;
+      this.tabBarElement.style.display = 'flex';
+    }, 4000);
+  }
+
+}
   // Load map only after view is initialized
   // ngAfterViewInit() {
  
