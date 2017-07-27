@@ -14,3 +14,42 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.ion-customicon1,
+.ion-ios-customicon1,
+.ion-ios-customicon1-outline,
+.ion-md-customicon1 {
+ content: url('../assets/New Home Icon.png');
+ width: 10px;
+ height: 10px;
+ padding-top: 4px;
+ padding-left: 10px;
+ padding-right: 10px;
+ padding-bottom: 2px;
+ opacity: 0.9;
+}
+
+.ion-customicon2,
+.ion-ios-customicon2,
+.ion-ios-customicon2-outline,
+.ion-md-customicon2 {
+ content: url('../assets/Court.png');
+ width: 50px;
+ height: 32px;
+ padding: 6px 8px 2px;
+ opacity: 0.9;
+}
+
+.ion-customicon3,
+.ion-ios-customicon3,
+.ion-ios-customicon3-outline,
+.ion-md-customicon3 {
+ content: url('../assets/Jersey.png');
+ width: 40px;
+ height: 32px;
+ padding: 6px 8px 2px;
+ opacity: 0.9;
+}
+
+ion-app._gmaps_cdv_ .nav-decor{
+   background: none !important;
+}

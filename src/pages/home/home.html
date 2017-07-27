@@ -1,23 +1,14 @@
 <ion-header>
-  <ion-navbar color ="main">  
+  <ion-navbar color="main">
     <ion-title class="title"><b>Home</b></ion-title>
   </ion-navbar>
 </ion-header>
-    <ion-content class="Home">
-      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-<ion-list *ngIf="typing">
-  <ion-item *ngFor="let item of items" (click)="goToAlumni()">
-    {{ item }}
-  </ion-item>
-</ion-list>            
-         <div #map id="map" style="height:100%" (click)="closeKB()"></div>
-
-   <div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
-  <div class="flb">
-    <div class="Aligner-item Aligner-item--top"></div>
-    <img src="assets/logo.svg">
-    <div class="Aligner-item Aligner-item--bottom"></div>
-  </div>
-</div>
-
-     </ion-content>
+<ion-content class="Home">
+  <!-- <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-list *ngIf="typing">
+    <ion-item *ngFor="let item of items" (click)="goToAlumni()">
+      {{ item }}
+    </ion-item>
+  </ion-list> -->
+  <div #map id="map" style="height:100%" ></div>
+</ion-content>

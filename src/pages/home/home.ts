@@ -26,28 +26,16 @@ export class HomePage {
   typing: boolean = false;
   searchQuery: string = '';
   items: string[];
-  splash: true;
-  tabBarElement: any;
 
 
   constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform) { 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-       this.loadMap();
+
        this.initializeItems();
-       this.tabBarElement = document.querySelector('.tabbar')
     });
   }
-    ionViewDidLoad() {
-    this.tabBarElement.style.display = 'none';
-    setTimeout(() => {
-      this.splash = false;
-      this.tabBarElement.style.display = 'flex';
-    }, 4000);
-  }
-
-}
   // Load map only after view is initialized
   // ngAfterViewInit() {
  
