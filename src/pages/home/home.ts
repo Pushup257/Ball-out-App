@@ -3,6 +3,9 @@ import { Platform } from 'ionic-angular';//sdsdsdsdsdsd
 import { NavController } from 'ionic-angular';
 import { JoinPage } from '../join/join';
 import { AlumniPage } from '../alumni/alumni';
+
+
+
 import {
  GoogleMaps,
  GoogleMap,
@@ -27,7 +30,7 @@ export class HomePage {
   items: string[];
 
 
-  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform) { //sdsdsd
+  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform, ) { //sdsdsd
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -126,6 +129,11 @@ loadMap() {
   }
   goToAlumni(){
       this.navCtrl.push(AlumniPage);
+      
+      
     }
+  closeKB(){
+    console.log('close kb');
+  }
 }
 
