@@ -14,7 +14,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GoogleMaps } from '@ionic-native/google-maps';
-import { KeyboardManagerProvider } from '../providers/keyboard-manager/keyboard-manager';
 
 @NgModule({
   declarations: [
@@ -46,7 +45,7 @@ import { KeyboardManagerProvider } from '../providers/keyboard-manager/keyboard-
     Geolocation,
     GoogleMaps,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    KeyboardManagerProvider
+
   ]
 })
 export class AppModule {}

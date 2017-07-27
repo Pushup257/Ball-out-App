@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';//sdsdsdsdsdsd
+import { Platform } from 'ionic-angular';
 import { NavController } from 'ionic-angular';
 import { JoinPage } from '../join/join';
 import { AlumniPage } from '../alumni/alumni';
-
-import { KeyboardManagerProvider } from "../../providers/keyboard-manager/keyboard-manager";
 
 import {
  GoogleMaps,
@@ -30,7 +28,7 @@ export class HomePage {
   items: string[];
 
 
-  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform, private keyboard : KeyboardManagerProvider) { 
+  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform) { 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -132,9 +130,6 @@ loadMap() {
       
       
     }
-  closeKB(){
-    console.log('close kb');
-    this.keyboard.closeKB();
-  }
+
 }
 
