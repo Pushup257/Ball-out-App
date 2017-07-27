@@ -14,7 +14,7 @@ import {
  CameraPosition,
  MarkerOptions,
  Marker
-} from '@ionic-native/google-maps'; ///ssdsdsdsd
+} from '@ionic-native/google-maps'; 
 
 
 
@@ -30,7 +30,7 @@ export class HomePage {
   items: string[];
 
 
-  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform, ) { //sdsdsd
+  constructor(public navCtrl: NavController,private googleMaps: GoogleMaps ,private platform: Platform, private keyboard : KeyboardManagerProvider) { 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -134,6 +134,7 @@ loadMap() {
     }
   closeKB(){
     console.log('close kb');
+    this.keyboard.closeKB();
   }
 }
 
